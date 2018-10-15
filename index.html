@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+    </head>
+    <body>
+        <h1>Olá Antonio Laur, Neide e Igor</h1>
+        <div id="app"></div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.1.0/react.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.1.0/react-dom.js"></script>
+
+        <script>
+            var h1 = React.createElement('div', null, 'Hello h1 React') // tipo, propriedades, conteúdo
+            ReactDOM.render(h1, document.getElementById('app'))// Renderizar na tela o h1 e passando o getElementById para passar onde quero renderizar meu elemento, no caso na DIV
+            console.log(h1) // Renderizar no Console
+        </script>
+    </body>
+</html>
