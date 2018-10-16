@@ -2,18 +2,31 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title></title>
+        <meta http-equiv="refresh" content="4">
+        <title>Laur</title>
     </head>
     <body>
-        <h1>Olá Antonio Laur, Neide e Igor</h1>
         <div id="app"></div>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.1.0/react.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/react/15.1.0/react-dom.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/babel-core/5.8.34/browser.min.js"></script>
 
+        <!-- Maneira 1 -->
         <script>
-            var h1 = React.createElement('div', null, 'Hello h1 React') // tipo, propriedades, conteúdo
+            var h1 = React.DOM.h1(null, [
+                React.DOM.span(null, 'Testo do span 2'), // tipo, propriedades, conteúdo 
+                React.DOM.span(null, React.DOM.i(null, 'Itálico'))   
+            ])
             ReactDOM.render(h1, document.getElementById('app'))// Renderizar na tela o h1 e passando o getElementById para passar onde quero renderizar meu elemento, no caso na DIV
             console.log(h1) // Renderizar no Console
+        </script>
+
+        <!-- Maneira 2 -->
+        <script type="text/babel"> // Babel serve para compilar Javascript, faz funcionar o Hello World
+            ReactDOM.render(
+                <h1>Hello World</h1>, 
+                document.getElementById('app')) // Onde ele vai renderizar
+    
         </script>
     </body>
 </html>
